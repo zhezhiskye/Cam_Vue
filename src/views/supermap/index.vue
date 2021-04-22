@@ -69,7 +69,7 @@ export default {
       this.Cesium = Cesium
       this.viewer = viewer
       console.log(this)
-      // entities.add(entity)
+      // 根据id找所有设备位置点
       var mythis = this
       this.viewer.entities.add({
         position: Cesium.Cartesian3.fromDegrees(120.9677706, 30.7985748),

@@ -71,8 +71,8 @@ export default {
     return {
       logo: logoImg,
       loginForm: {
-        username: 'admin',
-        password: '111111'
+        username: '',
+        password: ''
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -104,14 +104,19 @@ export default {
     },
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
+        debugger
         if (valid) {
           this.loading = true
-          this.$store.dispatch('user/login', this.loginForm).then(() => {
-            this.$router.push({ path: this.redirect || '/' })
-            this.loading = false
-          }).catch(() => {
-            this.loading = false
-          })
+          this.$router.push({ path: '/' })
+          this.$http.post('/user/Userlogin', this.loginForm)
+            .then((response) => {
+              console.log(response)
+              debugger
+              this.$router.push({ path: '/' })
+              this.loading = false
+            }).then((error) => {
+              console.log(error)
+            })
         } else {
           console.log('error submit!!')
           return false

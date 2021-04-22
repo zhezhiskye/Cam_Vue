@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CreateArticle from '../views/paperMannager/CreateArticle.vue'
-import ListArticle from '../views/paperMannager/ArticleList.vue'
-import EditArticle from '../views/paperMannager/EditArticle.vue'
 
 Vue.use(Router)
 
@@ -87,45 +84,6 @@ export const constantRoutes = [
       }
     ]
   },
-  // {
-  //   path: '/articles',
-  //   component: Layout,
-  //   redirect: '/articles/index',
-  //   name: 'MyArtic',
-  //   meta: { title: '文章管理', icon: 'paper' },
-  //   children: [
-  //     {
-  //       path: '/articles/index',
-  //       name: 'index',
-  //       component: ListArticle,
-  //       meta: { title: '文章列表', icon: 'arcticTab' }
-  //     },
-  //     {
-  //       path: '/articles/create',
-  //       name: 'create',
-  //       component: CreateArticle,
-  //       meta: { title: '添加文章', icon: 'addArctic' }
-  //     },
-  //     {
-  //       path: '/articles/edit/:id',
-  //       name: 'edit',
-  //       component: EditArticle
-  //     }
-  //   ]
-  // },
-
-  // {
-  //   path: '/uploadimg',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/uploadimg/upimg'),
-  //       name: 'Uploadimg',
-  //       meta: { title: '图像处理', icon: 'bigscreen', affix: true }
-  //     }
-  //   ]
-  // },
 
   {
     path: '/profile',
